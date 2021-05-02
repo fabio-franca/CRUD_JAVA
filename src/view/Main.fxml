@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="750.0" style="-fx-background-color: #828282;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerAgenda">
+   <children>
+      <Label layoutX="289.0" layoutY="14.0" text="Agenda Java" textFill="WHITE">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+      <Pane layoutX="10.0" layoutY="64.0" prefHeight="281.0" prefWidth="660.0" style="-fx-background-color: #B5B5B5;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="64.0">
+         <children>
+            <Label layoutX="15.0" layoutY="15.0" prefHeight="20.0" prefWidth="29.0" text="ID:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="53.0" text="NOME:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="94.0" text="SOBRENOME:">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="132.0" text="IDADE:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="167.0" text="TELEFONE:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="idContato" editable="false" layoutX="100.0" layoutY="12.0" prefHeight="25.0" prefWidth="66.0" style="-fx-background-color: grey;" />
+            <TextField fx:id="nome" layoutX="100.0" layoutY="51.0" />
+            <TextField fx:id="sobrenome" layoutX="100.0" layoutY="91.0" />
+            <TextField fx:id="idade" layoutX="100.0" layoutY="129.0" />
+            <TextField fx:id="telefone" layoutX="100.0" layoutY="164.0" />
+            <Button layoutX="159.0" layoutY="212.0" mnemonicParsing="false" onAction="#detalhesContato" prefWidth="90.0" text="Listar">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="20.0" layoutY="212.0" mnemonicParsing="false" onAction="#cadastrarContato" prefWidth="90.0" text="Cadastrar">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="20.0" layoutY="275.0" mnemonicParsing="false" onAction="#atualizarContato" prefHeight="25.0" prefWidth="90.0" text="Alterar" />
+            <Button layoutX="159.0" layoutY="275.0" mnemonicParsing="false" onAction="#apagarContato" prefWidth="90.0" text="Excluir" />
+            <TableView fx:id="tabelaAgenda" layoutX="288.0" layoutY="12.0" prefHeight="289.0" prefWidth="432.0">
+              <columns>
+                <TableColumn fx:id="nomeTabela" prefWidth="126.0" text="NOME" />
+                  <TableColumn fx:id="sobrenomeTabela" prefWidth="118.0" text="SOBRENOME" />
+                  <TableColumn fx:id="idadeTabela" prefWidth="44.0" text="IDADE" />
+                  <TableColumn fx:id="telefoneTabela" prefWidth="104.0" text="TELEFONE" />
+                <TableColumn fx:id="idTabela" prefWidth="37.0" text="ID" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <Button fx:id="btn_voltarSistema" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#retornarPrincipal" text="Voltar">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
